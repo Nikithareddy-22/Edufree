@@ -47,6 +47,16 @@ router.get("/approved", async (req, res) => {
   }
 });
 
+// Admin: get all videos
+router.get("/all", async (req, res) => {
+  try {
+    const videos = await Video.find().sort({ createdAt: -1 });
+    res.json(videos);
+  } catch (err) {
+    console.error("Admin fetch error:", err);
+    res.status(500).json({ message: "Failed to fetch videos" });
+  }
+});
 // Get all videos uploaded by a specific volunteer
 router.get("/:volunteerId", async (req, res) => {
   try {
@@ -79,15 +89,6 @@ router.patch("/:id/status", async (req, res) => {
   }
 });
 
-// Admin: get all videos
-router.get("/all", async (req, res) => {
-  try {
-    const videos = await Video.find().sort({ createdAt: -1 });
-    res.json(videos);
-  } catch (err) {
-    console.error("Admin fetch error:", err);
-    res.status(500).json({ message: "Failed to fetch videos" });
-  }
-});
+
 
 module.exports = router;

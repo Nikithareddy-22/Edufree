@@ -1,15 +1,15 @@
-import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import HeroSection from "./components/HeroSection";
+import { Route, Routes } from "react-router-dom";
 import AboutUs from "./components/AboutUs";
-import VolunteerForm from "./components/VolunteerForm"; // Register
-import Gallery from "./components/Gallery";
-import Contact from "./components/Contact";
-import AdminPanel from "./components/AdminPanel";
-import Footer from "./components/Footer";
-import Login from "./components/Login";
-import VolunteerDashboard from "./components/VolunteerDashboard";
 import AdminLogin from "./components/AdminLogin";
+import AdminPanel from "./components/AdminPanel";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
+import Gallery from "./components/Gallery";
+import HeroSection from "./components/HeroSection";
+import Login from "./components/Login";
+import Navbar from "./components/Navbar";
+import VolunteerDashboard from "./components/VolunteerDashboard";
+import VolunteerForm from "./components/VolunteerForm"; // Register
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/admin-panel" element={<AdminPanel />} />
         </Routes>
       </main>
       <Footer />

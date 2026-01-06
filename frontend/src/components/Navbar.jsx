@@ -1,7 +1,7 @@
 // src/components/Navbar.jsx
 
-import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -57,7 +57,7 @@ function Navbar() {
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/admin">
+            <Link className="nav-link" to="/admin-login">
               Admin
             </Link>
           </li>

@@ -13,7 +13,7 @@ app.use("/uploads", express.static("uploads"));
 const volunteerRoutes = require("./routes/volunteerRoutes");
 const authRoutes = require("./routes/authRoutes");
 const videoRoutes = require("./routes/videoRoutes");
-const adminRoutes = require("./routes/adminRoutes"); // ✅ NEW
+const adminRoutes = require("./routes/adminRoutes"); 
 
 app.use("/api/volunteers", volunteerRoutes);
 app.use("/api/auth", authRoutes);
